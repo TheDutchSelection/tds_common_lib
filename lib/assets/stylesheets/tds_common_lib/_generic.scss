@@ -1,0 +1,38 @@
+* {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  color: $body-color;
+  background: $body-bg;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+b, strong {
+  font-weight: $font-weight-medium; // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+a {
+  color: $generic-link-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $info;
+  }
+
+  &.link {
+    color: $headings-color;
+
+    &:hover,
+    &:focus {
+      color: $generic-link-color;
+    }
+  }
+}

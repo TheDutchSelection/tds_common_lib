@@ -1,0 +1,21 @@
+// Fonts
+@import "fonts/roboto";
+@import "fonts/google_material_icons";
+
+// Bootstrap functions
+@import "bootstrap/scss/functions";
+
+@import "variables";
+@import "variables_bootstrap_overwrites";
+
+// Libs
+@import "bootstrap/scss/bootstrap";
+@import "rails_bootstrap_forms";
+@import "perfect-scrollbar/css/perfect-scrollbar";
+
+@import "generic";
+@import "layout";
+@import "sidebar";
+@import "topbar";
+@import "page_titles";
+@import "service_panel";

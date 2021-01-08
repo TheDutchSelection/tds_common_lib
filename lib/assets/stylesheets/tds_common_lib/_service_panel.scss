@@ -1,0 +1,52 @@
+.service-panel{
+  background: $white;
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  position: fixed;
+  right: -280px;
+  top: 0;
+  transition: 0.3s ease-in;
+  width: 280px;
+  z-index: 100;
+
+  .service-panel-toggle{
+    position: absolute;
+    bottom: 27px;
+    left: -75px;
+    color: $white;
+    background: $cyan;
+    border-radius: 100%;
+    padding: 17px 20px;
+  }
+
+  &.show-service-panel{
+    position: fixed;
+    right: 0;
+    .service-panel-toggle{
+      border-radius: 30px 0 0 30px;
+      left: -54px;
+    }
+  }
+
+  .service-panel-body{
+    position: relative;
+    height: 100%;
+  }
+
+  .service-panel-tab{
+    display: flex;
+    .nav-item {
+      width: 33.33%;
+      text-align: center;
+      .nav-link{
+        color: $body-color;
+        border-bottom: 3px solid transparent;
+        padding: 15px 12px;
+        &:hover, &.active{
+          color: $dodgerblue;
+          border-bottom: 3px solid $dodgerblue;
+        }
+      }
+    }
+  }
+}
