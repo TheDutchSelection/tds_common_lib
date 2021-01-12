@@ -6,6 +6,10 @@
   transition: $transitions;;
   z-index: 50;
 
+  .material-icons {
+    font-size: 32px;
+  }
+
   .navbar-collapse {
     background: $topbar-background-color;
     padding: $topbar-navbar-collapse-padding;
@@ -41,10 +45,11 @@
     }
 
     .navbar-nav > .nav-item > .nav-link {
-      line-height: $topbar-navlink-height;
-      height: $topbar-navlink-height;
-      padding: $topbar-navlink-padding;
+      color: $white;
       font-size: $topbar-navlink-font-size;
+      height: $topbar-navlink-height;
+      line-height: $topbar-navlink-height;
+      padding: $topbar-navlink-padding;
     }
 
     .navbar-nav > .nav-item {

@@ -14,9 +14,7 @@ $gray-800: $gray-800 !default;
 $gray-900: $gray-900 !default;
 $black: $black !default;
 
-$blue: $dodgerblue !default;
-$indigo: $blueviolet !default;
-$purple: $mediumslateblue !default;
+$blue: $steelblue !default;
 $pink: $deeppink !default;
 $red: $crimson !default;
 $orange: $darkorange !default;
@@ -25,15 +23,10 @@ $yellow: $goldenrod !default;
 $green: $seagreen !default;
 $teal: $lightseagreen !default;
 $cyan: $turquoise !default;
-$primary: $mediumslateblue !default;
-$text-muted: $gray-500 !default;
-$inverse: $darkslategray !default;
 
 $dark-transparent: rgba(0, 0, 0, 0.05);
 
 $colors: ( blue: $blue,
-  indigo: $indigo,
-  purple: $purple,
   pink: $pink,
   red: $red,
   orange: $orange,
@@ -69,8 +62,6 @@ $theme-colors: map-merge((
   "dark": $dark,
   "cyan": $cyan,
   "orange": $orange,
-  "purple": $purple,
-  "inverse": $inverse,
   "megna": $megna
 ),
   $theme-colors);

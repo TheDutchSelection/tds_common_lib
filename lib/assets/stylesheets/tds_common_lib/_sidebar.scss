@@ -10,15 +10,15 @@
   z-index: 10;
 
   .sidebar-footer {
-    background: $sidebar-footer-background-color;
-    position: fixed;
-    bottom: 0;
-    width: $sidebar-width-full;
-    display: flex;
     align-items: center;
+    background: $sidebar-footer-background-color;
     border-top: 1px solid $border-color;
-    z-index: 99;
+    bottom: 0;
+    display: flex;
+    position: fixed;
     transition: $transitions;
+    width: $sidebar-width-full;
+    z-index: 99;
 
     a {
       color: $white;
@@ -26,6 +26,11 @@
       padding: $sidebar-footer-inner-padding;
       text-align: center;
       width: 33.333337%;
+    }
+
+    .material-icons {
+      color: $sidebar-text;
+      font-size: 22px;
     }
   }
 }
@@ -39,7 +44,7 @@
 
   >ul>.sidebar-item>.sidebar-link.active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: $turquoise;
+    background-color: $sidebar-text;
     color: $white !important;
     opacity: 1;
     font-weight: 400;
@@ -59,7 +64,7 @@
     padding: 15px;
 
     .sidebar-item {
-      color: $sidebar-text-dark;
+      color: $sidebar-text;
       margin-bottom: 10px;
       opacity: 1;
       width: 100%;
@@ -67,11 +72,10 @@
       .sidebar-link {
         align-items:center;
         border-radius: 4px;
-        color: $sidebar-text-dark;
+        color: $sidebar-text;
         display: flex;
         font-size: $sidebar-link-font-size;
         line-height: $sidebar-link-line-height;
-        opacity: 0.6;
         padding: $sidebar-link-padding;
         position: relative;
         white-space: nowrap;
@@ -86,26 +90,26 @@
           display: inline-block;
         }
 
+        .material-icons {
+          font-size: 22px;
+          padding-right: 2px;
+        }
+
         .hide-menu {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
 
-        &.active,
         &:hover {
-          opacity: 1;
-        }
-
-        &:hover {
-          color: $gray-800;
+          color: $sidebar-text-hover;
           i {
-            color: $gray-800;
+            color: $sidebar-text-hover;
           }
         }
 
         &.active {
-          color: $gray-900;
+          color: $sidebar-text-active;
           font-weight: 500;
         }
       }
@@ -156,7 +160,7 @@
 
     .nav-small-cap {
       align-items: center;
-      color: $sidebar-icons-dark;
+      color: $sidebar-header-color;
       display: flex;
       font-size: $sidebar-nav-small-cap-font-size;
       font-weight: 500;
@@ -208,7 +212,7 @@
     right: 15px;
     border-width: 1px 0 0  1px;
     border-style: solid;
-    border-color: $sidebar-text-dark;
+    border-color: $sidebar-text;
     transform: rotate(-45deg) translate(0, -50%);
     transform-origin: top;
     transition: all .3s ease-out;

@@ -22,30 +22,55 @@ $darkturquoise: #01c0c8 !default;
 $deeppink: #e83e8c !default;
 $dimgray: #67757c !default;
 $dodgerblue: #1e88e5 !default;
+$gainsboro:#e2e2e2 !default;
 $goldenrod: #ffb22b !default;
 $mediumslateblue: #7460ee !default;
 $lightseagreen: #20c997 !default;
 $seagreen: #28a745 !default;
 $slategray: #607d8b !default;
+$steelblue: #499cce !default;
 $turquoise: #26c6da !default;
+$whitesmoke: #f5f5f5 !default;
 
+$app-theme-color: $darkorange !default;
 
 // Fonts
+$font-size: 14px;
+$font-size-sm: 13px;
+$font-size-xs: 12px;
+$font-size-xxs: 11px;
+$font-size-xxxs: 10px;
+$font-size-xxxxs: 8px;
+$font-size-xl: 16px;
+$font-size-xxl: 20px;
 
-$font-weight-medium: 500;
+$font-weight-medium: 500 !default;
 $main-font: 'Roboto', sans-serif !default;
+$main-font-size: 14px !default;
+
+
+// Spacing
+$spacing-none: 0;
+$spacing-xxs: 1px;
+$spacing-xs: 2px;
+$spacing-sm: 5px;
+$spacing-smm: 8px;
+$spacing-md: 10px;
+$spacing-lg: 15px;
+$spacing-xl: 20px;
+$spacing-xxl: 25px;
 
 // Transitions
 
-$transitions: 0.2s ease-in;
+$transitions: 0.2s ease-in !default;
 
 
 // Generic
 
-$container-min-height: calc(100vh - 180px);
-$footer-padding: 17px 15px;
+$container-min-height: calc(100vh - 180px) !default;
+$footer-padding: 17px 15px !default;
 $generic-link-color: $dodgerblue !default;
-$page-wrapper-container-padding: 20px 30px;
+$page-wrapper-container-padding: 20px 30px !default;
 
 // Service Panel
 
@@ -53,41 +78,43 @@ $page-wrapper-container-padding: 20px 30px;
 
 // Sidebar
 
-$minisidebar-first-level-padding: 0 0 10px;
-$minisidebar-link-first-level-padding: 10px 12px;
-$minisidebar-link-padding: 14px 12px;
-$minisidebar-nav-cap-padding: 14px 14px 14px 14px;
-$sidebar-background-color: $white;
-$sidebar-icon-line-height: 25px;
-$sidebar-icon-size: 21px;
-$sidebar-icon-width: 30px;
-$sidebar-icons: $white;
-$sidebar-icons-dark: $darkgray;
-$sidebar-first-level-icon-size: 14px;
-$sidebar-first-level-link-padding: 10px 35px 10px 20px;
-$sidebar-first-level-padding: 10px 0 0 5px;
-$sidebar-footer-background-color: $gray-100;
-$sidebar-footer-inner-padding: 15px;
-$sidebar-footer-text-size: 18px;
-$sidebar-link-font-size: 15px;
-$sidebar-link-line-height: 25px;
-$sidebar-link-padding: 8px 35px 8px 8px;
-$sidebar-nav-cap-padding: 14px 14px 14px 20px;
-$sidebar-nav-small-cap-font-size: 12px;
-$sidebar-text: $white;
-$sidebar-text-dark: $slategray;
-$sidebar-width-full: 240px;
-$sidebar-width-mini: 65px;
+$minisidebar-first-level-padding: 0 0 10px !default;
+$minisidebar-link-first-level-padding: 10px 12px !default;
+$minisidebar-link-padding: 14px 12px !default;
+$minisidebar-nav-cap-padding: 14px 14px 14px 14px !default;
+$sidebar-background-color: $white !default;
+$sidebar-header-color: $app-theme-color !default;
+$sidebar-icon-line-height: 25px !default;
+$sidebar-icon-size: 21px !default;
+$sidebar-icon-width: 30px !default;
+$sidebar-icons: $white !default;
+$sidebar-icons-dark: $darkgray !default;
+$sidebar-first-level-icon-size: 14px !default;
+$sidebar-first-level-link-padding: 10px 35px 10px 20px !default;
+$sidebar-first-level-padding: 10px 0 0 5px !default;
+$sidebar-footer-background-color: $gray-100 !default;
+$sidebar-footer-inner-padding: 15px !default;
+$sidebar-footer-text-size: 18px !default;
+$sidebar-link-font-size: 15px !default;
+$sidebar-link-line-height: 25px !default;
+$sidebar-link-padding: 8px 35px 8px 8px !default;
+$sidebar-nav-cap-padding: 14px 14px 14px 20px !default;
+$sidebar-nav-small-cap-font-size: 12px !default;
+$sidebar-text: $slategray !default;
+$sidebar-text-hover: $gray-800 !default;
+$sidebar-text-active: $gray-900 !default;
+$sidebar-width-full: 240px !default;
+$sidebar-width-mini: 65px !default;
 
 
 // Topbar
 
-$topbar-background-color: $darkorange;
-$topbar-height: 70px;
-$topbar-navbar-collapse-padding: 0px 10px 0 0;
-$topbar-navbrand-padding: 0 10px;
-$topbar-navlink-font-size: 19px;
-$topbar-navlink-height: 70px;
-$topbar-navlink-padding: 0px .75rem;
-$topbar-toggler-color: $white;
-$topbar-toggler-padding: 0 .75rem;
+$topbar-background-color: $app-theme-color !default;
+$topbar-height: 70px !default;
+$topbar-navbar-collapse-padding: 0px 10px 0 0 !default;
+$topbar-navbrand-padding: 0 10px !default;
+$topbar-navlink-font-size: 19px !default;
+$topbar-navlink-height: 70px !default;
+$topbar-navlink-padding: 0px .75rem !default;
+$topbar-toggler-color: $white !default;
+$topbar-toggler-padding: 0 .75rem !default;
