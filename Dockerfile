@@ -27,7 +27,6 @@ FROM thedutchselection/app_env_tds_common_lib:latest
 MAINTAINER Gerard Meijer <g.meijer@thedutchselection.com>
 
 ADD --chown=appmaster:appmaster ./ /home/appmaster/application
-ADD --chown=appmaster:appmaster ./public /home/appmaster/application/public_original
 
 RUN bundle install
 
