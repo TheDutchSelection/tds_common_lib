@@ -12,6 +12,12 @@ Gem::Specification.new do |spec|
   spec.description = 'Commonly used stuff by TDS'
 
   spec.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.md']
+  spec.test_files = Dir['spec/**/*']
+
+  spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'figaro'
+  spec.add_development_dependency 'pg'
+  spec.add_development_dependency 'rspec-rails'
 
   spec.add_runtime_dependency 'autoprefixer-rails', '>= 10.0.1.0'
   spec.add_runtime_dependency 'bootstrap_form', '>= 4.5.0'
