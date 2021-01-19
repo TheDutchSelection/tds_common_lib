@@ -14,6 +14,9 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
+# dummy db:test:prepare, because rspec complaints it's not defined
+task 'db:test:prepare'
+
 load 'rails/tasks/statistics.rake'
 
 require 'bundler/gem_tasks'
