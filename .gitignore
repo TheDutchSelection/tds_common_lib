@@ -9,14 +9,18 @@
 /public/packs
 /public/packs-test
 /public/system
+/spec/dummy/log
+/spec/dummy/public/assets
+/spec/dummy/public/files
+/spec/dummy/public/packs
 /storage
 /tmp
 /yarn-error.log
 
 /config/application.yml
 /config/master.key
-spec/examples.txt
-spec/dummy/config/application.yml
+/spec/examples.txt
+/spec/dummy/config/application.yml
 !/storage/.keep
 !/tmp/.keep
 
