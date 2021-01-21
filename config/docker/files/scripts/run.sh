@@ -2,10 +2,8 @@
 set -e
 
 echo "migrating database..."
-cd spec/dummy
-rails db:create
-rails db:migrate
-cd ../..
+bin/rails db:create
+bin/rails db:migrate
 
 echo "running application tests..."
 if [[ -z "$RSPEC_OPTS" ]]; then

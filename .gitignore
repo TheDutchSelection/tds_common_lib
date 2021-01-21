@@ -13,6 +13,7 @@
 /spec/dummy/public/assets
 /spec/dummy/public/files
 /spec/dummy/public/packs
+/spec/dummy/tmp
 /storage
 /tmp
 /yarn-error.log

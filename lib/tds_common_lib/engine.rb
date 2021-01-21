@@ -1,7 +1,4 @@
 module TdsCommonLib
-
-  require 'figaro'
-
   class Engine < ::Rails::Engine
     isolate_namespace TdsCommonLib
 
