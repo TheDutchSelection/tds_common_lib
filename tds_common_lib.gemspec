@@ -14,14 +14,18 @@ Gem::Specification.new do |spec|
   spec.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.md']
   spec.test_files = Dir['spec/**/*']
 
+  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'database_cleaner'
   spec.add_development_dependency 'factory_bot_rails'
   spec.add_development_dependency 'figaro'
   spec.add_development_dependency 'pg'
   spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'timecop'
 
   spec.add_runtime_dependency 'autoprefixer-rails', '>= 10.0.1.0'
   spec.add_runtime_dependency 'bootstrap_form', '>= 4.5.0'
   spec.add_runtime_dependency 'bootstrap4-kaminari-views', '>= 1.0.1'
   spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.0.0'
+  spec.add_runtime_dependency 'carrierwave', '>= 2.1.0'
   spec.add_runtime_dependency 'rails', '>= 6.0.3.4'
 end
