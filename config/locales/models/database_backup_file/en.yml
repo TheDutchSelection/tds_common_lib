@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    tds_common_lib:
+      database_backup_file:
+        one: "Database backup file"
+        other: "Database backup files"
+        attributes:
+          database_backup_file:
+            created_at: "Created at"
+            database_backup_id: "Database backup id"
+            file_name: "File"
