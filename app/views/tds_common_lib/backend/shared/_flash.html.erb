@@ -1,8 +1,10 @@
 <div class="container">
   <% flash.each do |type, msg| %>
-    <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show js-flash-<%= type %>">
+    <%= content_tag(:div, class: "alert #{bootstrap_class_for_flash(type)} fade show", data: { controller: 'backend--flash', 'flash-type': type }) do %>
       <%= msg %>
-      <button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
-    </div>
+      <button class="close" data-action="click->backend--flash#dismiss">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <% end %>
   <% end %>
 </div>
