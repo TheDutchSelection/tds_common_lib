@@ -6,6 +6,8 @@ module TdsCommonLib
 
     has_many :files, -> { order(id: :desc) }, dependent: :destroy, class_name: 'TdsCommonLib::DatabaseBackupFile'
 
+    broadcasts
+
     def run
       files.new.create_file
     end

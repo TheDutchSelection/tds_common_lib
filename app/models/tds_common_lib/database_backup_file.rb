@@ -5,6 +5,8 @@ module TdsCommonLib
 
     belongs_to :database_backup
 
+    broadcasts_to :database_backup
+
     TEMP_DATABASE_BACKUP_DIRECTORY = Rails.root.join('tmp/database_backups/').to_s
 
     def create_file
