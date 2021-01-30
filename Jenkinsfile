@@ -38,25 +38,27 @@ def runMainContainer(mainDockerImage, postgresqlContainer, redisContainer, rspec
 }
 
 try {
-  stage('Setup') {
-    node {
-      utils.standardPipelineSetup(dependentImageName, dependentImageTag)
-      checkout scm
+  if (env.BRANCH_NAME != 'master') {
+    stage('Setup') {
+      node {
+        utils.standardPipelineSetup(dependentImageName, dependentImageTag)
+        checkout scm
+      }
     }
-  }
 
-  stage('Build') {
-    node {
-      mainDockerImage = utils.buildDockerImage(env.TDS_REGISTRY_ADDRESS, mainImageName, env.BRANCH_NAME)
+    stage('Build') {
+      node {
+        mainDockerImage = utils.buildDockerImage(env.TDS_REGISTRY_ADDRESS, mainImageName, env.BRANCH_NAME)
+      }
     }
-  }
 
-  stage('Test') {
-    node {
-      def testResult = runTests()
+    stage('Test') {
+      node {
+        def testResult = runTests()
 
-      if (testResult != 0) {
-        throw new Exception('Tests failed!')
+        if (testResult != 0) {
+          throw new Exception('Tests failed!')
+        }
       }
     }
   }
