@@ -1,8 +1,9 @@
 .page-titles {
-  padding: 15px 30px;
+  padding-left: 30px;
   background: $white;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
+  height: $page-title-height;
+  margin-bottom: 0px;
 
   .pagetitle-header {
     color: $info;
