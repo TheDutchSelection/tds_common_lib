@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_093106) do
+ActiveRecord::Schema.define(version: 2021_02_04_122551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tds_common_lib_abilities", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "user_type", null: false
+    t.string "permission", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "user_type", "permission"], name: "index_abilities", unique: true
+  end
 
   create_table "tds_common_lib_database_backup_files", force: :cascade do |t|
     t.string "file_name", null: false
