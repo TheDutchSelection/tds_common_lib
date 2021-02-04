@@ -108,5 +108,53 @@ module TdsCommonLib
 
     end
 
+    describe '.reset_abilities_from_role' do
+
+      let(:user) { double('user') }
+      let(:user_class) { double('User') }
+      let!(:ability_1) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'delete_this') }
+      let!(:ability_2) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'delete_that') }
+
+      before do
+        allow(user).to receive(:id) { 1 }
+        allow(user).to receive(:class) { user_class }
+        allow(user).to receive(:role) { 'editor' }
+        allow(user_class).to receive(:name) { 'User' }
+
+        TdsCommonLib.configure do |config|
+          config.user_roles = {
+            'User' => {
+              admin: [],
+              editor: [
+                :edit_this,
+                :edit_that,
+                :delete_something
+              ]
+            }
+          }
+        end
+      end
+
+      it 'should create the correct abilities' do
+        abilities = Ability.all
+
+        expect(abilities.count).to eq 2
+        expect(Ability.user_has_permission?(user, :delete_this)).to eq true
+        expect(Ability.user_has_permission?(user, :delete_that)).to eq true
+
+        Ability.reset_abilities_from_role(user)
+
+        abilities.reload
+
+        expect(abilities.count).to eq 3
+        expect(Ability.user_has_permission?(user, :edit_this)).to eq true
+        expect(Ability.user_has_permission?(user, :edit_that)).to eq true
+        expect(Ability.user_has_permission?(user, :delete_something)).to eq true
+        expect(Ability.user_has_permission?(user, :delete_this)).to eq false
+        expect(Ability.user_has_permission?(user, :delete_that)).to eq false
+      end
+
+    end
+
   end
 end
