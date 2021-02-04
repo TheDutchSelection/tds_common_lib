@@ -17,5 +17,9 @@ module TdsCommonLib
       end
     end
 
+    def self.reset_abilities_from_role(user)
+      Ability.where(user_id: user.id).destroy_all
+      create_abilities_from_role(user)
+    end
   end
 end
