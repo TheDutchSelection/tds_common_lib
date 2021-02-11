@@ -70,7 +70,7 @@ $theme-colors: map-merge((
 // Fonts
 
 $font-family-sans-serif: $main-font;
-
+$text-muted: $gray-500 !default;
 
 // Headings
 
