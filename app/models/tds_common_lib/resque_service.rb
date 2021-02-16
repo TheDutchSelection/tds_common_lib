@@ -1,6 +1,8 @@
 module TdsCommonLib
   class ResqueService
 
+    DEFAULT_MAX_WAITING_TIME = 14400
+
     def initialize
     end
 
@@ -19,7 +21,7 @@ module TdsCommonLib
       end
     end
 
-    def stop_processing_and_wait(max_waiting_seconds)
+    def stop_processing_and_wait(max_waiting_seconds = DEFAULT_MAX_WAITING_TIME)
       stop_processing
 
       start_time = Time.now
