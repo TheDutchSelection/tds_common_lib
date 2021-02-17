@@ -3,7 +3,7 @@ module TdsCommonLib
 
     include TdsCommonLib::RecordsLimitable
 
-    queue_as :default
+    queue_as :miscellaneous
 
     def perform(database_backup_id)
       database_backup = TdsCommonLib::DatabaseBackup.find(database_backup_id)
