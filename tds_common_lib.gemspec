@@ -28,5 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.0.0'
   spec.add_runtime_dependency 'carrierwave', '>= 2.1.1'
   spec.add_runtime_dependency 'hotwire-rails', '>= 0.1.3'
+  spec.add_runtime_dependency 'iban-tools', '1.1.0'
   spec.add_runtime_dependency 'rails', '>= 6.0.3.4'
 end

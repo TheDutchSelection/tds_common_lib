@@ -19,3 +19,5 @@ en:
   validators:
     email:
       not_valid: "is not a valid email address"
+    iban:
+      not_valid: "is not a valid IBAN address"
