@@ -1,5 +1,23 @@
-<div class="service-panel collapse js-service-panel">
-  <div class="service-panel-toggle-close js-service-panel-toggle" data-toggle="collapse" data-target=".js-service-panel">
+<div class="mb-3 text-right">
+  <%= button_tag(
+        type: :button,
+        class: 'btn btn-sm btn-outline-secondary',
+        aria: {
+          controls: 'js-service-panel',
+          expanded: false
+        },
+        data: {
+          target: '#js-service-panel',
+          toggle: 'collapse'
+        }
+      ) do
+  %>
+    <span class="material-icons">settings</span>
+  <% end %>
+</div>
+
+<div id="js-service-panel" class="service-panel collapse">
+  <div class="service-panel-toggle-close js-service-panel-toggle" data-toggle="collapse" data-target="#js-service-panel">
     <span class="material-icons">close</span>
   </div>
   <div class="service-panel-body js-service-panel-body">
@@ -34,7 +52,4 @@
       <!-- End Tab 3 -->
     </div>
   </div>
-</div>
-<div class="service-panel-toggle js-service-panel-toggle" data-toggle="collapse" data-target=".js-service-panel">
-  <span class="material-icons">settings</span>
 </div>
