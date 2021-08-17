@@ -9,7 +9,7 @@ module TdsCommonLib
         expect(helper.bootstrap_class_for_flash('error')).to eq 'alert-danger'
         expect(helper.bootstrap_class_for_flash('alert')).to eq 'alert-warning'
         expect(helper.bootstrap_class_for_flash('notice')).to eq 'alert-info'
-        expect(helper.bootstrap_class_for_flash('something')).to eq 'something'
+        expect(helper.bootstrap_class_for_flash('something')).to eq 'alert-something'
       end
     end
 
