@@ -2,7 +2,7 @@ module TdsCommonLib
   module Backend
     module ApplicationHelper
       def bootstrap_class_for_flash(flash_type)
-        case flash_type
+        case flash_type.to_s
         when 'success'
           'alert-success'
         when 'error'
@@ -12,7 +12,7 @@ module TdsCommonLib
         when 'notice'
           'alert-info'
         else
-          flash_type.to_s
+          "alert-#{flash_type}"
         end
       end
 
