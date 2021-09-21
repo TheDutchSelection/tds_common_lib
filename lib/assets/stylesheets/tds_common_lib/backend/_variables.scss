@@ -1,6 +1,5 @@
 // Colors
 
-$white: #fff !default;
 $gray-100: #f2f4f8 !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -10,117 +9,127 @@ $gray-600: #6c757d !default;
 $gray-700: #4f5467 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black: #000 !default;
 
-$aliceblue: #eef5f9 !default;
+$black: #000000 !default;
 $blueviolet: #6610f2 !default;
-$crimson: #dc3545 !default;
-$darkgray: #99abb4 !default;
-$darkorange: #ff8a17 !default;
-$darkslategray: #2f3d4a !default;
-$darkturquoise: #01c0c8 !default;
-$deeppink: #e83e8c !default;
-$dimgray: #67757c !default;
-$dodgerblue: #1e88e5 !default;
-$gainsboro: #e2e2e2 !default;
-$goldenrod: #ffb22b !default;
-$mediumslateblue: #7460ee !default;
-$lightseagreen: #20c997 !default;
-$seagreen: #28a745 !default;
-$slategray: #607d8b !default;
-$steelblue: #499cce !default;
-$turquoise: #26c6da !default;
-$whitesmoke: #f5f5f5 !default;
+$cornflowerblue: #4d83ff !default;
+$crimson: #e91e63 !default;
+$darkgray: #9b9b9b !default;
+$darkslateblue: #41478a !default;
+$darkslategray: #282f3a !default;
+$dimgray: #686868 !default;
+$dodgerblue: #3498db !default;
+$gainsboro: #e3e3e3 !default;
+$ghostwhite: #f8f9fa !default;
+$gold: #ffc100 !default;
+$khaki: #f6e84e !default;
+$lavender: #eaeaf1 !default;
+$lightslategray: #8d9498 !default;
+$mediumaquamarine: #58d8a3 !default;
+$mediumseagreen: #46c35f !default;
+$mediumslateblue: #5e50f9 !default;
+$mediumturquoise: #57c7d4 !default;
+$purple: #6a008a !default;
+$salmon: #f96868 !default;
+$sandybrown: #f2a654 !default;
+$silver: #c9c8c8 !default;
+$slategray: #76838f !default;
+$tomato: #ff4747 !default;
+$white: #ffffff !default;
+$whitesmoke: #f3f3f3 !default;
+$yellowgreen: #71c016 !default;
 
-$app-theme-color: $darkorange !default;
+
+// Actions
+$action-transition-duration: 0.25s;
+$action-transition-timing-function: ease;
+
+
+// Buttons
+$btn-border-radius-xs: .1875rem;
+$button-fixed-width: 150px;
+$btn-font-size-xs: .7rem;
+$btn-padding-y-xs: .2rem;
+$btn-padding-x-xs: .3rem;
+
+
+// Cards
+$card-box-shadow: none;
+$card-description-color: $slategray;
+$card-padding-x: 1.875rem;
+$card-padding-y: 1.5rem;
+$card-spacing-y: 1.875rem;
+$card-title-color: $darkslategray;
+
+// Forms
+
+$input-padding-y-xs: .5rem;
+$input-padding-x-xs: .75rem;
+$label-font-size: 12px;
+
 
 // Fonts
-$font-size: 14px;
-$font-size-sm: 13px;
-$font-size-xs: 12px;
-$font-size-xxs: 11px;
-$font-size-xxxs: 10px;
-$font-size-xxxxs: 8px;
-$font-size-xl: 16px;
-$font-size-xxl: 20px;
-
-$font-weight-medium: 500 !default;
-$main-font: 'Roboto', sans-serif !default;
-$main-font-size: 14px !default;
+$default-font: 'Roboto', sans-serif !default;
+$default-font-size: 14px !default;
 
 
-// Spacing
-$spacing-none: 0;
-$spacing-xxs: 1px;
-$spacing-xs: 2px;
-$spacing-sm: 5px;
-$spacing-smm: 8px;
-$spacing-md: 10px;
-$spacing-lg: 15px;
-$spacing-xl: 20px;
-$spacing-xxl: 25px;
-
-// Transitions
-
-$transitions: 0.2s ease-in !default;
+// Footer
+$footer-height: 75px;
+$footer-bg: $whitesmoke;
+$footer-color: $darkslategray;
 
 
 // Generic
-
-$container-min-height: calc(100vh - 180px) !default;
-$footer-padding: 17px 15px !default;
-$generic-link-color: $dodgerblue !default;
-$page-wrapper-container-padding: 20px 30px !default;
+$content-bg: $whitesmoke;
 
 
-// Page title
+// Navbar
+$navbar-default-bg: $white;
+$navbar-font-size: .875rem;
+$navbar-height: 60px;
+$navbar-icon-font-size: .9375rem;
+$navbar-menu-color: $darkgray;
 
-$page-title-height: 70px;
 
-
-// Layout Cards
-$layout-card-bottom-margin: 30px;
+// Navs
+$nav-pills-custom-bg: $white;
+$nav-tabs-link-bg: $ghostwhite;
+$nav-tabs-link-color: $black;
 
 
 // Sidebar
+$sidebar-arrow-font-size: .625rem;
+$sidebar-box-shadow: none;
+$sidebar-icon-font-size: 1.125rem;
+$sidebar-icon-only-menu-padding: .5rem 1.625rem .5rem 1.188rem;
+$sidebar-icon-only-submenu-padding: 0 0 0 1.5rem;
+$sidebar-light-bg: $white;
+$sidebar-light-menu-active-bg: initial;
+$sidebar-light-menu-active-color: $cornflowerblue;
+$sidebar-light-menu-arrow-color: $black;
+$sidebar-light-menu-color: $black;
+$sidebar-light-menu-hover-bg: transparent;
+$sidebar-light-menu-hover-color: $cornflowerblue;
+$sidebar-light-menu-icon-color: inherit;
+$sidebar-light-submenu-active-color: $black;
+$sidebar-light-submenu-color: $dimgray;
+$sidebar-light-submenu-hover-color: $black;
+$sidebar-light-profile-name-color: $darkslategray;
+$sidebar-light-profile-title-color: $lightslategray;
+$sidebar-menu-font-size: .875rem;
+$sidebar-menu-padding-bottom: .75rem;
+$sidebar-menu-padding-left: 1.25rem;
+$sidebar-menu-padding-right: 2.5rem;
+$sidebar-menu-padding-top: .75rem;
+$sidebar-mini-menu-padding: .8125rem 1rem .8125rem 1rem;
+$sidebar-profile-bg: transparent;
+$sidebar-profile-padding: 0 1.625rem 2.25rem 1.188rem;
+$sidebar-submenu-font-size: .875rem;
+$sidebar-submenu-item-padding: .6rem 1rem;
+$sidebar-submenu-padding: .25rem 0 0.6rem 3.55rem;
+$sidebar-width-icon: 70px;
+$sidebar-width-lg: 257px;
+$sidebar-width-mini: 185px;
 
-$minisidebar-first-level-padding: 0 0 10px !default;
-$minisidebar-link-first-level-padding: 10px 12px !default;
-$minisidebar-link-padding: 14px 12px !default;
-$minisidebar-nav-cap-padding: 14px 14px 14px 14px !default;
-$sidebar-background-color: $white !default;
-$sidebar-header-color: $app-theme-color !default;
-$sidebar-icon-line-height: 25px !default;
-$sidebar-icon-size: 21px !default;
-$sidebar-icon-width: 30px !default;
-$sidebar-icons: $white !default;
-$sidebar-icons-dark: $darkgray !default;
-$sidebar-first-level-icon-size: 14px !default;
-$sidebar-first-level-link-padding: 10px 35px 10px 20px !default;
-$sidebar-first-level-padding: 10px 0 0 5px !default;
-$sidebar-footer-background-color: $gray-100 !default;
-$sidebar-footer-inner-padding: 15px !default;
-$sidebar-footer-text-size: 18px !default;
-$sidebar-link-font-size: 15px !default;
-$sidebar-link-line-height: 25px !default;
-$sidebar-link-padding: 8px 35px 8px 8px !default;
-$sidebar-nav-cap-padding: 14px 14px 14px 20px !default;
-$sidebar-nav-small-cap-font-size: 12px !default;
-$sidebar-text: $slategray !default;
-$sidebar-text-hover: $gray-800 !default;
-$sidebar-text-active: $gray-900 !default;
-$sidebar-width-full: 240px !default;
-$sidebar-width-mini: 65px !default;
-
-
-// Topbar
-
-$topbar-background-color: $app-theme-color !default;
-$topbar-height: 70px !default;
-$topbar-navbar-collapse-padding: 0px 10px 0 0 !default;
-$topbar-navbrand-padding: 0 10px !default;
-$topbar-navlink-font-size: 19px !default;
-$topbar-navlink-height: 70px !default;
-$topbar-navlink-padding: 0px .75rem !default;
-$topbar-toggler-color: $white !default;
-$topbar-toggler-padding: 0 .75rem !default;
+$icon-only-collapse-width: 190px;
+$icon-only-menu-bg-light: $sidebar-light-bg;

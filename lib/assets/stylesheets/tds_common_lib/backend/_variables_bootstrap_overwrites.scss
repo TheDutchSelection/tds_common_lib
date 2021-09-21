@@ -1,7 +1,6 @@
 @import "./variables";
 
 // Colors
-
 $white: $white !default;
 $gray-100: $gray-100 !default;
 $gray-200: $gray-200 !default;
@@ -14,82 +13,138 @@ $gray-800: $gray-800 !default;
 $gray-900: $gray-900 !default;
 $black: $black !default;
 
-$blue: $steelblue !default;
-$pink: $deeppink !default;
-$red: $crimson !default;
-$orange: $darkorange !default;
-$megna: $darkturquoise !default;
-$yellow: $goldenrod !default;
-$green: $seagreen !default;
-$teal: $lightseagreen !default;
-$cyan: $turquoise !default;
+$blue: $mediumslateblue !default;
+$cyan: $mediumturquoise !default;
+$green: $mediumseagreen !default;
+$indigo: $blueviolet !default;
+$orange: $sandybrown !default;
+$pink: $crimson !default;
+$purple: $purple !default;
+$red: $salmon !default;
+$yellow: $khaki !default;
+$teal: $mediumaquamarine !default;
 
-$dark-transparent: rgba(0, 0, 0, 0.05);
-
-$colors: ( blue: $blue,
-  pink: $pink,
-  red: $red,
-  orange: $orange,
-  yellow: $yellow,
-  green: $green,
-  teal: $teal,
+$colors: (
+  blue: $blue,
   cyan: $cyan,
-  white: $white,
   gray: $gray-600,
-  gray-dark: $gray-800);
+  gray-dark: $gray-800,
+  gray-light: $gray-500,
+  gray-lighter: $gray-300,
+  gray-lightest: $gray-200,
+  green: $green,
+  indigo: $indigo,
+  orange: $orange,
+  pink: $pink,
+  purple: $purple,
+  red: $red,
+  teal: $teal,
+  white: $white,
+  yellow: $yellow
+);
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
-$success: $green !default;
-$info: $blue !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
-$cyan: $cyan !default;
-$orange: $orange !default;
-$megna: $megna !default;
+$primary: $cornflowerblue !default;
+$secondary: $dimgray !default;
+$success: $yellowgreen !default;
+$info: $mediumslateblue !default;
+$warning: $gold !default;
+$danger: $tomato !default;
+$light: $ghostwhite !default;
+$dark: $darkslategray !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-  "cyan": $cyan,
-  "orange": $orange,
-  "megna": $megna
-),
-  $theme-colors);
+$theme-colors: map-merge(
+    (
+      "primary": $primary,
+      "secondary": $secondary,
+      "success": $success,
+      "info": $info,
+      "warning": $warning,
+      "danger": $danger,
+      "light": $light,
+      "dark": $dark
+    ),
+    $theme-colors
+);
 
 
-// Fonts
-
-$font-family-sans-serif: $main-font;
-$text-muted: $gray-500 !default;
-
-// Headings
-
-$headings-margin-bottom: (1rem / 2) !default;
-$headings-font-weight: 400 !default;
-$headings-color: $darkslategray !default;
-
-
-// Body & Background
-
-$body-bg: $aliceblue !default;
+// Body
 $body-color: $dimgray !default;
 
 
-// Code
+// Borders
+$border-color: $whitesmoke !default;
 
+
+// Buttons
+$btn-border-radius: .1875rem;
+$btn-border-radius-sm: .1875rem;
+$btn-border-radius-lg: .1875rem;
+$btn-font-size: .875rem;
+$btn-font-size-sm: .875rem;
+$btn-font-size-lg: .875rem;
+$btn-padding-x: 1.5rem;
+$btn-padding-x-lg: 3rem;
+$btn-padding-x-sm: .81rem;
+$btn-padding-y: .75rem;
+$btn-padding-y-lg: 1rem;
+$btn-padding-y-sm: .50rem;
+$btn-line-height: 1;
+
+
+// Cards
+$card-border-radius: 0;
+$card-border-color: $lavender;
+
+
+// Code
 $kbd-bg: $white !default;
 
 
-// Navs
+// Dropdowns
+$dropdown-border-color: $border-color;
+$dropdown-divider-bg:   $border-color;
+$dropdown-header-color: $body-color;
+$dropdown-link-color:   $body-color;
+$dropdown-link-hover-bg: $lavender;
 
-$nav-tabs-link-active-bg: $white !default;
+
+// Fonts
+$font-family-sans-serif: $default-font;
+$text-muted: $gray-500 !default;
+$font-size-base: .875rem !default;
+
+
+// Forms
+$input-bg: $white;
+$input-border-radius: 2px;
+$input-font-size: .875rem;
+$input-height: 2.875rem;
+$input-height-lg: 3.5rem;
+$input-height-sm: 2.25rem;
+$input-line-height: 1;
+$input-padding-y: .875rem;
+$input-padding-y-lg: .94rem;
+$input-padding-y-sm: .50rem;
+$input-padding-x: 1.375rem;
+$input-padding-x-lg: 1.94rem;
+$input-padding-x-sm: .81rem;
+$input-placeholder-color: $lightslategray;
+
+
+// Grid
+$grid-gutter-width: 20px;
+
+
+// Navs
+$nav-tabs-border-color: $lavender;
+$nav-tabs-link-active-bg: $white;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg;
+$nav-tabs-link-active-color: $body-color;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color;
+
+// Tables
+$table-accent-bg: $content-bg;
+$table-border-color: $border-color;
+$table-cell-padding: 1.25rem .9375rem;
+$table-hover-bg: $lavender;

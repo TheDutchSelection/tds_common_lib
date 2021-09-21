@@ -22,12 +22,12 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'timecop'
 
-  spec.add_runtime_dependency 'autoprefixer-rails', '>= 10.0.1.0'
+  spec.add_runtime_dependency 'autoprefixer-rails', '>= 10.3.3.0'
   spec.add_runtime_dependency 'bootstrap_form', '>= 4.5.0'
   spec.add_runtime_dependency 'bootstrap4-kaminari-views', '>= 1.0.1'
-  spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.0.0'
-  spec.add_runtime_dependency 'carrierwave', '>= 2.1.1'
+  spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.1.0'
+  spec.add_runtime_dependency 'carrierwave', '>= 2.2.2'
   spec.add_runtime_dependency 'hotwire-rails', '>= 0.1.3'
   spec.add_runtime_dependency 'iban-tools', '1.1.0'
-  spec.add_runtime_dependency 'rails', '>= 6.0.3.4'
+  spec.add_runtime_dependency 'rails', '>= 6.1.4.1'
 end
