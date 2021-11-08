@@ -22,6 +22,7 @@ module TdsCommonLib
       let!(:ability_1) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'something_user_1_can_do') }
       let!(:ability_2) { FactoryBot.create(:ability, user_id: 1, user_type: 'ClientUser', permission: 'something_client_user_1_can_do') }
       let!(:ability_3) { FactoryBot.create(:ability, user_id: 2, user_type: 'User', permission: 'something_user_2_can_do') }
+      let!(:ability_4) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'something_user_1_can_also_do') }
 
       before do
         allow(user_1).to receive(:id) { 1 }
@@ -41,6 +42,9 @@ module TdsCommonLib
         expect(Ability.user_has_permission?(user_3, :something_user_2_can_do)).to eq true
         expect(Ability.user_has_permission?(user_2, :something_user_1_can_do)).to eq false
         expect(Ability.user_has_permission?(user_3, :something_user_1_can_do)).to eq false
+        expect(Ability.user_has_permission?(user_1, [:something_user_1_can_do, :something_client_user_1_can_do])).to eq true
+        expect(Ability.user_has_permission?(user_2, [:something_user_1_can_do, :something_client_user_1_can_do])).to eq true
+        expect(Ability.user_has_permission?(user_3, [:something_user_1_can_do, :something_client_user_1_can_do])).to eq false
       end
 
     end
