@@ -18,11 +18,25 @@ module TdsCommonLib
     end
 
     def self.create_abilities_from_role(user)
-      role = Role.new(user.class.name, user.role)
+      user_roles = user.role
 
-      if role.name != :admin
-        role.permissions.each do |permission|
-          create_or_find_by(user_id: user.id, user_type: user.class.name, permission: permission)
+      if user_roles.is_a?(Array)
+        user_roles.each do |user_role|
+          role = Role.new(user.class.name, user_role)
+
+          if role.name != :admin
+            role.permissions.each do |permission|
+              create_or_find_by(user_id: user.id, user_type: user.class.name, permission: permission)
+            end
+          end
+        end
+      else
+        role = Role.new(user.class.name, user_roles)
+
+        if role.name != :admin
+          role.permissions.each do |permission|
+            create_or_find_by(user_id: user.id, user_type: user.class.name, permission: permission)
+          end
         end
       end
     end

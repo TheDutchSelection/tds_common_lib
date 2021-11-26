@@ -54,6 +54,7 @@ module TdsCommonLib
       let(:user_1) { double('user') }
       let(:user_2) { double('client_user') }
       let(:user_3) { double('user') }
+      let(:user_4) { double('client_user') }
       let(:user_class_1) { double('User') }
       let(:user_class_2) { double('ClientUser') }
 
@@ -67,6 +68,9 @@ module TdsCommonLib
         allow(user_3).to receive(:id) { 2 }
         allow(user_3).to receive(:class) { user_class_1 }
         allow(user_3).to receive(:role) { 'admin' }
+        allow(user_4).to receive(:id) { 3 }
+        allow(user_4).to receive(:class) { user_class_2 }
+        allow(user_4).to receive(:role) { ['data', 'data_more'] }
         allow(user_class_1).to receive(:name) { 'User' }
         allow(user_class_2).to receive(:name) { 'ClientUser' }
 
@@ -77,6 +81,13 @@ module TdsCommonLib
               data: [
                 :view_this,
                 :view_that
+              ],
+              data_more: [
+                :do_this,
+                :view_that
+              ],
+              data_more_more: [
+                :do_that
               ]
             },
             'User' => {
@@ -99,15 +110,19 @@ module TdsCommonLib
         Ability.create_abilities_from_role(user_1)
         Ability.create_abilities_from_role(user_2)
         Ability.create_abilities_from_role(user_3)
+        Ability.create_abilities_from_role(user_4)
 
         abilities.reload
 
-        expect(abilities.count).to eq 5
+        expect(abilities.count).to eq 8
         expect(Ability.user_has_permission?(user_1, :edit_this)).to eq true
         expect(Ability.user_has_permission?(user_1, :edit_that)).to eq true
         expect(Ability.user_has_permission?(user_1, :delete_something)).to eq true
         expect(Ability.user_has_permission?(user_2, :view_this)).to eq true
-        expect(Ability.user_has_permission?(user_2, :view_this)).to eq true
+        expect(Ability.user_has_permission?(user_2, :view_that)).to eq true
+        expect(Ability.user_has_permission?(user_4, :view_this)).to eq true
+        expect(Ability.user_has_permission?(user_4, :view_that)).to eq true
+        expect(Ability.user_has_permission?(user_4, :do_this)).to eq true
       end
 
     end
