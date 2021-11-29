@@ -129,12 +129,19 @@ module TdsCommonLib
 
     describe '.reset_abilities_from_role' do
 
+      let(:client_user) { double('client_user') }
+      let(:client_user_class) { double('ClientUser') }
       let(:user) { double('user') }
       let(:user_class) { double('User') }
       let!(:ability_1) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'delete_this') }
       let!(:ability_2) { FactoryBot.create(:ability, user_id: 1, user_type: 'User', permission: 'delete_that') }
+      let!(:ability_3) { FactoryBot.create(:ability, user_id: 1, user_type: 'ClientUser', permission: 'delete_this') }
 
       before do
+        allow(client_user).to receive(:id) { 1 }
+        allow(client_user).to receive(:class) { client_user_class }
+        allow(client_user).to receive(:role) { 'viewer' }
+        allow(client_user_class).to receive(:name) { 'ClientUser' }
         allow(user).to receive(:id) { 1 }
         allow(user).to receive(:class) { user_class }
         allow(user).to receive(:role) { 'editor' }
@@ -142,6 +149,12 @@ module TdsCommonLib
 
         TdsCommonLib.configure do |config|
           config.user_roles = {
+            'ClientUser' => {
+              viewer: [
+                :view_this,
+                :view_that
+              ]
+            },
             'User' => {
               admin: [],
               editor: [
@@ -157,7 +170,13 @@ module TdsCommonLib
       it 'should create the correct abilities' do
         abilities = Ability.all
 
-        expect(abilities.count).to eq 2
+        expect(abilities.count).to eq 3
+        expect(Ability.user_has_permission?(client_user, :delete_this)).to eq true
+        expect(Ability.user_has_permission?(client_user, :view_this)).to eq false
+        expect(Ability.user_has_permission?(client_user, :view_that)).to eq false
+        expect(Ability.user_has_permission?(user, :edit_this)).to eq false
+        expect(Ability.user_has_permission?(user, :edit_that)).to eq false
+        expect(Ability.user_has_permission?(user, :delete_something)).to eq false
         expect(Ability.user_has_permission?(user, :delete_this)).to eq true
         expect(Ability.user_has_permission?(user, :delete_that)).to eq true
 
@@ -165,7 +184,24 @@ module TdsCommonLib
 
         abilities.reload
 
-        expect(abilities.count).to eq 3
+        expect(abilities.count).to eq 4
+        expect(Ability.user_has_permission?(client_user, :delete_this)).to eq true
+        expect(Ability.user_has_permission?(client_user, :view_this)).to eq false
+        expect(Ability.user_has_permission?(client_user, :view_that)).to eq false
+        expect(Ability.user_has_permission?(user, :edit_this)).to eq true
+        expect(Ability.user_has_permission?(user, :edit_that)).to eq true
+        expect(Ability.user_has_permission?(user, :delete_something)).to eq true
+        expect(Ability.user_has_permission?(user, :delete_this)).to eq false
+        expect(Ability.user_has_permission?(user, :delete_that)).to eq false
+
+        Ability.reset_abilities_from_role(client_user)
+
+        abilities.reload
+
+        expect(abilities.count).to eq 5
+        expect(Ability.user_has_permission?(client_user, :delete_this)).to eq false
+        expect(Ability.user_has_permission?(client_user, :view_this)).to eq true
+        expect(Ability.user_has_permission?(client_user, :view_that)).to eq true
         expect(Ability.user_has_permission?(user, :edit_this)).to eq true
         expect(Ability.user_has_permission?(user, :edit_that)).to eq true
         expect(Ability.user_has_permission?(user, :delete_something)).to eq true
