@@ -27,7 +27,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'bootstrap4-kaminari-views', '>= 1.0.1'
   spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.1.0'
   spec.add_runtime_dependency 'carrierwave', '>= 2.2.2'
-  spec.add_runtime_dependency 'hotwire-rails', '>= 0.1.3'
   spec.add_runtime_dependency 'iban-tools', '1.1.0'
   spec.add_runtime_dependency 'rails', '>= 6.1.4.1'
+  spec.add_runtime_dependency 'stimulus-rails', '>= 1.0.4'
+  spec.add_runtime_dependency 'turbo-rails', '>= 1.0.1'
 end

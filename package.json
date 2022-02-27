@@ -7,7 +7,8 @@
   },
   "version": "0.1.7",
   "dependencies": {
-    "@hotwired/turbo-rails": "7.0.0-rc.4",
+    "@hotwired/stimulus": "3.0.1",
+    "@hotwired/turbo-rails": "7.1.1",
     "@rails/ujs": "6.1.4-1",
     "@rails/webpacker": "5.4.3",
     "bootstrap": "4.6.0",
@@ -20,8 +21,7 @@
     "lodash": "4.17.21",
     "popper.js": "1.16.1",
     "query-string": "6.14.1",
-    "spectrum-colorpicker": "1.8.1",
-    "stimulus": "2.0.0"
+    "spectrum-colorpicker": "1.8.1"
   },
   "files": [
     "lib/javascript"
