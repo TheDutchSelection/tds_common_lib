@@ -19,17 +19,17 @@ module TdsCommonLib
       def status_label_class(status)
         case status
         when 'approved', 'done', 'paid', 'success'
-          'badge badge-success'
+          'badge bg-success'
         when 'distribution_done', 'queued', 'success_with_errors', 'warning'
-          'badge badge-warning'
+          'badge bg-warning'
         when 'being_distributed', 'running', 'writing'
-          'badge badge-primary'
+          'badge bg-primary'
         when 'closed', 'danger', 'failed', 'rejected'
-          'badge badge-danger'
+          'badge bg-danger'
         when 'waiting_to_process'
-          'badge badge-info'
+          'badge bg-info'
         else
-          'badge badge-secondary'
+          'badge bg-secondary'
         end
       end
     end

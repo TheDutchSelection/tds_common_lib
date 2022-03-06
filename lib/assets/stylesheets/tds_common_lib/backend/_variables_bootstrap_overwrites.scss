@@ -1,54 +1,11 @@
 @import "./variables";
 
-// Colors
-$white: $white !default;
-$gray-100: $gray-100 !default;
-$gray-200: $gray-200 !default;
-$gray-300: $gray-300 !default;
-$gray-400: $gray-400 !default;
-$gray-500: $gray-500 !default;
-$gray-600: $gray-600 !default;
-$gray-700: $gray-700 !default;
-$gray-800: $gray-800 !default;
-$gray-900: $gray-900 !default;
-$black: $black !default;
-
-$blue: $mediumslateblue !default;
-$cyan: $mediumturquoise !default;
-$green: $mediumseagreen !default;
-$indigo: $blueviolet !default;
-$orange: $sandybrown !default;
-$pink: $crimson !default;
-$purple: $purple !default;
-$red: $salmon !default;
-$yellow: $khaki !default;
-$teal: $mediumaquamarine !default;
-
-$colors: (
-  blue: $blue,
-  cyan: $cyan,
-  gray: $gray-600,
-  gray-dark: $gray-800,
-  gray-light: $gray-500,
-  gray-lighter: $gray-300,
-  gray-lightest: $gray-200,
-  green: $green,
-  indigo: $indigo,
-  orange: $orange,
-  pink: $pink,
-  purple: $purple,
-  red: $red,
-  teal: $teal,
-  white: $white,
-  yellow: $yellow
-);
-
 $primary: $cornflowerblue !default;
 $secondary: $dimgray !default;
 $success: $yellowgreen !default;
 $info: $mediumslateblue !default;
 $warning: $gold !default;
-$danger: $tomato !default;
+$danger: $crimson !default;
 $light: $ghostwhite !default;
 $dark: $darkslategray !default;
 
@@ -95,28 +52,16 @@ $sizes: map-merge(
     $sizes
 );
 
+// Badges
+$badge-font-size: .8em !default;
+
+
 // Body
 $body-color: $dimgray !default;
 
 
 // Borders
 $border-color: $whitesmoke !default;
-
-
-// Buttons
-$btn-border-radius: .1875rem;
-$btn-border-radius-sm: .1875rem;
-$btn-border-radius-lg: .1875rem;
-$btn-font-size: .875rem;
-$btn-font-size-sm: .875rem;
-$btn-font-size-lg: .875rem;
-$btn-padding-x: 1.5rem;
-$btn-padding-x-lg: 3rem;
-$btn-padding-x-sm: .81rem;
-$btn-padding-y: .75rem;
-$btn-padding-y-lg: 1rem;
-$btn-padding-y-sm: .50rem;
-$btn-line-height: 1;
 
 
 // Cards
@@ -128,14 +73,6 @@ $card-border-color: $lavender;
 $kbd-bg: $white !default;
 
 
-// Dropdowns
-$dropdown-border-color: $border-color;
-$dropdown-divider-bg:   $border-color;
-$dropdown-header-color: $body-color;
-$dropdown-link-color:   $body-color;
-$dropdown-link-hover-bg: $lavender;
-
-
 // Fonts
 $font-family-sans-serif: $default-font;
 $text-muted: $gray-500 !default;
@@ -143,25 +80,17 @@ $font-size-base: .875rem !default;
 
 
 // Forms
-$input-bg: $white;
-$input-border-radius: 2px;
-$input-font-size: .875rem;
-$input-font-size-sm: .765rem;
-$input-height: 2.875rem;
-$input-height-lg: 3.5rem;
-$input-height-sm: 2rem;
-$input-line-height: 1;
-$input-padding-y: .875rem;
-$input-padding-y-lg: .94rem;
-$input-padding-y-sm: .50rem;
-$input-padding-x: 1.375rem;
-$input-padding-x-lg: 1.94rem;
-$input-padding-x-sm: .81rem;
-$input-placeholder-color: $lightslategray;
-
+$form-label-color: $lightslategray;
+$form-label-font-size: .9em !default;
+$form-text-font-size: .7rem !default;
+$input-placeholder-color: $silver;
 
 // Grid
 $grid-gutter-width: 20px;
+
+
+// Navbar
+$navbar-toggler-focus-width: 0;
 
 
 // Navs
@@ -172,7 +101,4 @@ $nav-tabs-link-active-color: $body-color;
 $nav-tabs-link-hover-border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color;
 
 // Tables
-$table-accent-bg: $content-bg;
-$table-border-color: $border-color;
-$table-cell-padding: 1.25rem .9375rem;
-$table-hover-bg: $lavender;
+$table-group-separator-color: $whitesmoke !default;

@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'timecop'
 
   spec.add_runtime_dependency 'autoprefixer-rails', '>= 10.3.3.0'
-  spec.add_runtime_dependency 'bootstrap_form', '>= 4.5.0'
+  spec.add_runtime_dependency 'bootstrap_form', '>= 5.0.0'
   spec.add_runtime_dependency 'bootstrap4-kaminari-views', '>= 1.0.1'
   spec.add_runtime_dependency 'breadcrumbs_on_rails', '>= 4.1.0'
   spec.add_runtime_dependency 'carrierwave', '>= 2.2.2'
