@@ -2,7 +2,7 @@
   <div class="col-12">
     <% flash.each do |type, msg| %>
       <%= content_tag :div,
-                      class: "alert #{bootstrap_class_for_flash(type)} fade show",
+                      class: "alert #{bootstrap_class_for_flash(type)} alert-dismissible fade show",
                       data: {
                         controller: 'tds-common-lib-backend--flash',
                         tds_common_lib_backend__flash_flash_type_value: type
@@ -10,13 +10,14 @@
       %>
         <%= msg %>
         <%= content_tag :button,
-                        class: 'close',
+                        class: 'btn-close',
+                        aria: {
+                          label: 'close'
+                        },
                         data: {
                           action: 'click->tds-common-lib-backend--flash#dismiss'
                         } do
-        %>
-          <span aria-hidden="true">&times;</span>
-        <% end %>
+        %><% end %>
       <% end %>
     <% end %>
   </div>
