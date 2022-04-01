@@ -4,7 +4,7 @@ PATH
     tds_common_lib (0.1.5)
       autoprefixer-rails (>= 10.3.3.0)
       bootstrap4-kaminari-views (>= 1.0.1)
-      bootstrap_form (>= 4.5.0)
+      bootstrap_form (>= 5.0.0)
       breadcrumbs_on_rails (>= 4.1.0)
       carrierwave (>= 2.2.2)
       iban-tools (= 1.1.0)
