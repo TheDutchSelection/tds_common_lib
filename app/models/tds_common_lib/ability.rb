@@ -4,16 +4,18 @@ module TdsCommonLib
     validates_uniqueness_of :permission, scope: [:user_id, :user_type]
 
     def self.user_has_permission?(user, permission)
+      user_abilities = where(user_id: user.id, user_type: user.class.name)
+
       if permission.is_a?(Array)
         has_permission = false
         permission.each do |permis|
-          has_permission = find_by(user_id: user.id, user_type: user.class.name, permission: permis).present?
+          has_permission = user_abilities.find { |ua| ua.permission.to_s == permis.to_s }.present?
           break if has_permission
         end
 
         has_permission
       else
-        find_by(user_id: user.id, user_type: user.class.name, permission: permission).present?
+        user_abilities.find { |ua| ua.permission.to_s == permission.to_s }.present?
       end
     end
 
