@@ -36,7 +36,7 @@ module TdsCommonLib
 
       end
 
-      it 'should return true if a user has a certain permission' do
+      fit 'should return true if a user has a certain permission' do
         expect(Ability.user_has_permission?(user_1, :something_user_1_can_do)).to eq true
         expect(Ability.user_has_permission?(user_2, :something_client_user_1_can_do)).to eq true
         expect(Ability.user_has_permission?(user_3, :something_user_2_can_do)).to eq true
