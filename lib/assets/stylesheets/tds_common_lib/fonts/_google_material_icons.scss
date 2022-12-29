@@ -7,3 +7,12 @@
   src: local('Material Icons'), local("MaterialIcons-Regular"),
   font-url('MaterialIcons-Regular.ttf') format('truetype')
 }
+
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('MaterialIconsOutlined-Regular.otf');
+  src: local('Material Icons Outlined'), local("MaterialIconsOutlined-Regular"),
+  font-url('MaterialIconsOutlined-Regular.otf') format('opentype');
+}

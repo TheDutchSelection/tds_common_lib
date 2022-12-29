@@ -18,15 +18,15 @@ module TdsCommonLib
 
       def status_label_class(status)
         case status
-        when 'approved', 'done', 'paid', 'success'
+        when 'approved', 'debugging_done', 'done', 'paid', 'success'
           'badge bg-success'
-        when 'distribution_done', 'queued', 'success_with_errors', 'warning'
+        when 'success_with_errors', 'warning'
           'badge bg-warning'
-        when 'being_distributed', 'running', 'writing'
+        when 'downloading', 'post_processing', 'processing', 'running', 'writing'
           'badge bg-primary'
         when 'closed', 'danger', 'failed', 'rejected'
           'badge bg-danger'
-        when 'waiting_to_process'
+        when 'waiting_to_download', 'waiting_to_post_process', 'waiting_to_process'
           'badge bg-info'
         else
           'badge bg-secondary'
